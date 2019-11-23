@@ -102,7 +102,7 @@ const Sincronizar = props => (
                   `Email: ${email}
                   Password: ${password}`,
                   )}
-                />
+                >
                 Recibir datos
               </Button> 
               
