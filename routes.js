@@ -14,7 +14,8 @@ import ArticleCover from './src/screens/ArticleCover';
 import Cards from './src/screens/Cards';
 import Components from './src/screens/Components';
 import Login from './src/screens/Login';
-import News from './src/screens/News';
+import Clientes from './src/screens/Clientes';
+import Configuracion from './src/screens/Configuracion';
 import OrderConfirmed from './src/screens/OrderConfirmed';
 import Presentation from './src/screens/Presentation';
 import Dashboard from './src/screens/Dashboard';
@@ -28,10 +29,10 @@ import { Block, Icon, Text } from 'galio-framework';
 const GalioDrawer = props => (
   <SafeAreaView style={styles.drawer} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block space="between" row style={styles.header}>
-      <Block flex={0.3}><Image source={{ uri: 'http://i.pravatar.cc/100' }} style={styles.avatar} /></Block>
+      <Block flex={0.3}><Image source={{ uri: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/gas-128.png' }} style={styles.avatar} /></Block>
       <Block flex style={styles.middle}>
-        <Text size={theme.SIZES.FONT * 0.875}>Galio Framework</Text>
-        <Text muted size={theme.SIZES.FONT * 0.875}>React Native</Text>
+        <Text size={theme.SIZES.FONT * 0.875}>SPL v1.0</Text>
+        <Text muted size={theme.SIZES.FONT * 0.875}>Sistema de Preventa de Lubricantes</Text>
       </Block>
     </Block>
     <ScrollView>
@@ -84,6 +85,14 @@ MenuIcon.propTypes = {
 };
 
 const screens = {
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      drawerLabel: 'Acceso a Usuario',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  
   Home: {
     screen: Components,
     navigationOptions: {
@@ -91,8 +100,8 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  Cards: {
-    screen: Cards,
+  Clientes: {
+    screen: Clientes,
     navigationOptions: {
       drawerLabel: 'Clientes',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
@@ -113,10 +122,10 @@ const screens = {
     },
   },
 
-  News: {
-    screen: News,
+  Configuracion: {
+    screen: Configuracion,
     navigationOptions: {
-      drawerLabel: 'News Screen',
+      drawerLabel: 'Configuración',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
@@ -127,13 +136,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  Login: {
-    screen: Login,
-    navigationOptions: {
-      drawerLabel: 'Acceso a Usuario',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+
 };
 
 

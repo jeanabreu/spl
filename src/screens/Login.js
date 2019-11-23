@@ -2,6 +2,8 @@ import React from 'react';
 import {
   Alert, Dimensions, KeyboardAvoidingView, StyleSheet, Platform,
 } from 'react-native';
+//import Dropdown from 'react-dropdown';
+//import 'react-dropdown/style.css'
 
 // galio component
 import {
@@ -86,11 +88,13 @@ class Login extends React.Component {
             </Text>
           </Block>
 
+                   
+
           <Block flex={2} center space="evenly">
             <Block flex={2}>
               <Input
                 rounded
-                type="email-address"
+                type="select"
                 placeholder="Usuario"
                 autoCapitalize="none"
                 style={{ width: width * 0.9 }}

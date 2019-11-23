@@ -4,11 +4,12 @@ import {
   Image, StyleSheet, ScrollView, Platform, TouchableOpacity
 } from 'react-native';
 
+
 import Constants from 'expo-constants';
 
 // Galio components
 import {
-  Button, Block, Card, Text, Icon, NavBar,
+  Button, Block, Card, Text, Icon, NavBar,Input,
 } from 'galio-framework';
 import theme from '../theme';
 
@@ -47,10 +48,10 @@ Author.propsTypes = {
 };
 
 
-const News = props => (
+const Clientes = props => (
   <Block safe flex>
     <NavBar
-      title="News"
+      title="Configuración"
       titleStyle={{ alignSelf: 'flex-start' }}
       leftIconColor={theme.COLORS.MUTED}
       left={(
@@ -86,76 +87,35 @@ const News = props => (
 
     <ScrollView style={{ flex: 1 }}>
       <Block flex style={styles.news}>
-        <Image
-          source={{ uri: 'https://images.unsplash.com/photo-1535649168324-4198731b2252?fit=crop&w=1300&q=80' }}
-          style={styles.articleImage}
-        />
+        
         <Block style={styles.article}>
-          <Text h4>
-            I would happily watch a TV show about crabs
-          </Text>
-          <Text muted style={[styles.text, { marginVertical: theme.SIZES.BASE * 1.3 }]}>
-            InterBlocking is super star
-          </Text>
-          <Text style={styles.text}>
-            You should totally read this sutuff, like seriously all yo homies
-            love sneak dissing but at least u’re true, right?
-          </Text>
-          <Text muted style={styles.text}>
-            Spicy jalapeno bacon ipsum dolor amet short loin cupidatat est, pork
-            pancetta velit kevin occaecat ipsum aliqua ham tri-tip incididunt.
-          </Text>
-          <Text muted style={styles.text}>
-            Irure sirloin nostrud filet mignon capicola strip
-            steak, sink pork dolore pig shirt ribs. Et pariatur
-            sunt, ribeye esse frankfurter biltong nostrud. Elit
-            do filet mignon turkey, temport pastrami ea bacon. In
-            tritip id cupim tail ham irure. Drumstick esse ut
-            andouille strip steak. Et pariatur sunt, ribeye esse
-            frankfurter biltong nostrud. Elit do filet mignon
-            turkey, temport pastrami ea bacon. In tritip id
-            cupim tail ham irure. Drumstick esse ut andouille
-            strip steak.
-          </Text>
+                
+                <Text muted center size={theme.SIZES.FONT * 1.575} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>
+                 Buscar Cliente:
+                </Text>
+                <Input
+                  rounded
+                  placeholder="Codigo de Cliente"
+                  placeholderTextColor={theme.COLORS.THEME}
+                  style={{ borderColor: theme.COLORS.THEME }}
+                />
+                
+                <Button
+                round
+                color="error"
+                onPress={() => Alert.alert(
+                  'Sign in action',
+                  `Email: ${email}
+                  Password: ${password}`,
+                  )}
+                >
+                Buscar Cliente
+              </Button> 
         </Block>
       </Block>
     </ScrollView>
 
-    <Card
-      flex
-      borderless
-      shadowColor={theme.COLORS.BLACK}
-      style={styles.author}
-      title="Christopher Moon"
-      caption="139 minutes ago"
-      avatar="http://i.pravatar.cc/100?id=article"
-      location={(
-        <Block row right>
-          <Block row middle style={{ marginHorizontal: theme.SIZES.BASE }}>
-            <Icon name="eye" family="font-awesome" color={theme.COLORS.MUTED} size={theme.SIZES.FONT * 0.875} />
-            <Text
-              p
-              color={theme.COLORS.MUTED}
-              size={theme.SIZES.FONT * 0.875}
-              style={{ marginLeft: theme.SIZES.BASE * 0.25 }}
-            >
-              25.6k
-            </Text>
-          </Block>
-          <Block row middle>
-            <Icon name="heart" family="font-awesome" color={theme.COLORS.MUTED} size={theme.SIZES.FONT * 0.875} />
-            <Text
-              p
-              color={theme.COLORS.MUTED}
-              size={theme.SIZES.FONT * 0.875}
-              style={{ marginLeft: theme.SIZES.BASE * 0.25 }}
-            >
-              936
-            </Text>
-          </Block>
-        </Block>
-      )}
-    />
+    
   </Block>
 );
 
@@ -196,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default News;
+export default Clientes;
