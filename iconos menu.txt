@@ -1,0 +1,9 @@
+clientes		= user-circle
+productos		= dropbox
+pedidos			= calendar-minus-o
+estado de pedido	= shopping-cart
+ofertas			= puzzle-piece
+itinerario		= list-ul
+configurar		= gears
+cargar datos		= rotate-right
+finalizar dia		= hourglass-end
