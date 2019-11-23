@@ -97,13 +97,12 @@ const Sincronizar = props => (
                 <Button
                 round
                 color="error"
-                marginBottom="20px"
                 onPress={() => Alert.alert(
                   'Sign in action',
                   `Email: ${email}
                   Password: ${password}`,
                   )}
-                >
+                />
                 Recibir datos
               </Button> 
               
