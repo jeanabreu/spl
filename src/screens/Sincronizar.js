@@ -105,6 +105,7 @@ const Sincronizar = props => (
                 >
                 Recibir datos
               </Button> 
+              <br/>
 
                <Button
                 round
