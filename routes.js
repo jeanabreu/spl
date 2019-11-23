@@ -15,6 +15,7 @@ import Cards from './src/screens/Cards';
 import Components from './src/screens/Components';
 import Login from './src/screens/Login';
 import Clientes from './src/screens/Clientes';
+import Pedidos from './src/screens/Pedidos';
 import Configuracion from './src/screens/Configuracion';
 import OrderConfirmed from './src/screens/OrderConfirmed';
 import Presentation from './src/screens/Presentation';
@@ -116,8 +117,8 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  ArticleCover: {
-    screen: ArticleCover,
+  Pedidos: {
+    screen: Pedidos,
     navigationOptions: {
       drawerLabel: 'Pedidos',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
