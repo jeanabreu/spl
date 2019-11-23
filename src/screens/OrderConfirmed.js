@@ -22,7 +22,7 @@ class OrderConfirmed extends React.Component {
     return (
       <Block safe flex>
         <NavBar
-          title="Confirmed Order"
+          title="Datos del Cierre del Dia"
           left={(
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
               <Icon 
@@ -37,36 +37,49 @@ class OrderConfirmed extends React.Component {
         />
         <Block flex center space="around" style={styles.container}>
           <Block center flex={2}>
-            <Block center style={{ marginBottom: theme.SIZES.BASE * 2 }}>
+            <Block center style={{ marginBottom: theme.SIZES.BASE * 1 }}>
               <Image
                 source={orderConfirmedImage}
-                style={{ marginBottom: theme.SIZES.BASE * 2 }}
+                style={{ marginBottom: theme.SIZES.BASE * 1.2 }}
               />
-              <Text h4 color={theme.COLORS.BLACK}>
-                Well done!
+              <Text h5 color={theme.COLORS.BLACK}>
+                Detalles del Cierre
               </Text>
             </Block>
-            <Text
-              color={theme.COLORS.BLACK}
-              style={{ marginBottom: theme.SIZES.BASE }}
-            >
-              <Text
-                size={theme.SIZES.FONT * 1.675}
-                bold
-              >
-                #45C23B&nbsp;
-              </Text>
-              <Text >
-                is your order number
-              </Text>
-            </Text>
-            <Text color={theme.COLORS.INFO}>
-              Track your order
-            </Text>
+            <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Total de Clientes:</Text> 0
+             </Text> 
+             <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Efectividad de Visitas: </Text> 0% (0/0)
+             </Text> 
+             <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Efectividad de Ventas: </Text> 0% (0/0)
+             </Text>
+             <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Abstención de Ventas: </Text> 0% (0/0)
+             </Text>
+             <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Efectividad General de Ventas: </Text> 0% (0/0)
+             </Text>
+             <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Total en Ventas: </Text> RD$ 0,000.00
+             </Text> 
+             <Text muted center size={theme.SIZES.FONT * 1} style={styles.alignleft}>
+                <Text style={styles.blond}>Total de Unidades: </Text> 0
+             </Text>
+             <Text muted center size={theme.SIZES.FONT * 0.80} style={{ marginTop: theme.SIZES.BASE * 2.3 }}></Text>
+                      
           </Block>
-          <Button size="large" color="info" round onPress={() => navigation.openDrawer()}>
-            Continue Shopping
-          </Button>
+          <Block>
+            <Text muted center size={theme.SIZES.FONT * 0.80} style={{ marginTop: theme.SIZES.BASE * 2.3 }}></Text>
+              <Button size="large" color="info" round onPress={() => navigation.openDrawer()}>
+                Confirmar cierre de dia
+              </Button>
+            <Text muted center size={theme.SIZES.FONT * 0.80} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}></Text>
+              <Button size="large" color="error" round onPress={() => navigation.openDrawer()}>
+                Cancelar
+              </Button>
+          </Block>
         </Block>
       </Block>
     )
@@ -80,7 +93,18 @@ const styles = StyleSheet.create({
     backgroundColor: theme.COLORS.WHITE,
     marginTop: theme.SIZES.BASE * 1.875,
     marginBottom: height * 0.1
-  }
+  },
+  texto: {
+    backgroundColor: theme.COLORS.WHITE,
+    fontWeight: 'bold',
+  },
+  alignleft: {
+    textAlign: 'left', 
+    alignSelf: 'stretch'
+  },
+  blond: {
+    fontWeight: 'bold',
+  },
 });
 
 export default OrderConfirmed;

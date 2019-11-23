@@ -10,18 +10,33 @@ import {
   Block, Button, Input, NavBar, Text,
 } from 'galio-framework';
 import theme from '../theme';
+import Select from 'react-select';
 
 const { height, width } = Dimensions.get('window');
+//const defaultOption = options[0];
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
+];
 
 class Login extends React.Component {
   state = {
     email: '-',
     password: '-',
+    selectedOption: null,
   }
 
   handleChange = (name, value) => {
     this.setState({ [name]: value });
   }
+
+  handleChange = selectedOption => {
+    this.setState(
+      { selectedOption },
+      () => console.log(`Option selected:`, this.state.selectedOption)
+    );
+  };
 
   render() {
     const { navigation } = this.props;
@@ -95,11 +110,14 @@ class Login extends React.Component {
               <Input
                 rounded
                 type="select"
-                placeholder="Usuario"
+                placeholder="Ruta"
                 autoCapitalize="none"
                 style={{ width: width * 0.9 }}
                 onChangeText={text => this.handleChange('email', text)}
               />
+
+                <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+
               <Input
                 rounded
                 password

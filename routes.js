@@ -135,11 +135,17 @@ const screens = {
   OrderConfirmed: {
     screen: OrderConfirmed,
     navigationOptions: {
-      drawerLabel: 'Orden Confirmada',
+      drawerLabel: 'Cierre del Dia',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-
+  Sincronizar: {
+    screen: Sincronizar,
+    navigationOptions: {
+      drawerLabel: 'Sincronizar Datos',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
 };
 
 
