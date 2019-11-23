@@ -117,6 +117,9 @@ const Sincronizar = props => (
                 >
                 Enviar datos
               </Button> 
+              <Text muted center size={theme.SIZES.FONT * 1.0} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>
+                 Ultima Actualizacion 01/01/01
+                </Text>
         </Block>
       </Block>
     </ScrollView>
