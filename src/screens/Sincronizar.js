@@ -101,11 +101,13 @@ const Sincronizar = props => (
                   'Sign in action',
                   `Email: ${email}
                   Password: ${password}`,
-                  )}
-                />
+                  )}>
                 Recibir datos
               </Button> 
               
+              <Text muted center size={theme.SIZES.FONT * 0.80} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>                 
+                </Text>
+
                <Button
                 round
                 color="error"
@@ -117,8 +119,9 @@ const Sincronizar = props => (
                 >
                 Enviar datos
               </Button> 
+                
               <Text muted center size={theme.SIZES.FONT * 1.0} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>
-                 Ultima Actualizacion 01/01/01
+                 Ultima Actualizacion 10/11/2019
                 </Text>
         </Block>
       </Block>

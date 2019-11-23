@@ -128,8 +128,23 @@ const Configuracion = props => (
                 Agregar Producto
               </Button> 
 
-              <Text muted center size={theme.SIZES.FONT * 1.275} style={{ paddingHorizontal: theme.SIZES.BASE * 5.3 }}>
+              <Text muted center size={theme.SIZES.FONT * 1.275} style={styles.subtotal}>
                 Totales a Pagar
+             </Text>  
+             <Text muted center size={theme.SIZES.FONT * 1.275} style={styles.alignleft}>
+                <Text style={styles.blond}>Subtotal:</Text> RD$ 0,000.00
+             </Text> 
+             <Text muted center size={theme.SIZES.FONT * 1.275} style={styles.alignleft}>
+                <Text style={styles.blond}>Desc. %:</Text> RD$ 0,000.00
+             </Text> 
+             <Text muted center size={theme.SIZES.FONT * 1.275} style={styles.alignleft}>
+                <Text style={styles.blond}>Oferta: </Text>RD$ 0,000.00
+             </Text>
+             <Text muted center size={theme.SIZES.FONT * 1.275} style={styles.alignleft}>
+                <Text style={styles.blond}>ITBIS: </Text>RD$ 0,000.00
+             </Text>
+             <Text muted center size={theme.SIZES.FONT * 1.275} style={styles.alignleft}>
+             <Text style={styles.blond}>Total: </Text>RD$ 0,000.00
              </Text>  
               
         </Block>
@@ -167,6 +182,19 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     elevation: theme.SIZES.BASE / 2,
+  },
+  subtotal: {
+    backgroundColor: theme.COLORS.WHITE,
+    marginTop: theme.SIZES.BASE * 7.0,
+    marginLeft: theme.SIZES.BASE * 10,
+    fontWeight: 'bold',
+  },
+  alignleft: {
+    textAlign: 'right', 
+    alignSelf: 'stretch'
+  },
+  blond: {
+    fontWeight: 'bold',
   },
   text: {
     fontWeight: '400',
