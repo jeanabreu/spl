@@ -48,7 +48,7 @@ Author.propsTypes = {
 };
 
 
-const Clientes = props => (
+const EstadodePedido = props => (
   <Block safe flex>
     <NavBar
       title="Configuración"
@@ -91,11 +91,11 @@ const Clientes = props => (
         <Block style={styles.article}>
                 
                 <Text muted center size={theme.SIZES.FONT * 1.575} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>
-                 Buscar Cliente:
+                 Consultar:
                 </Text>
                 <Input
                   rounded
-                  placeholder="Codigo de Cliente"
+                  placeholder="Codigo de Pedido"
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Clientes;
+export default EstadodePedido;

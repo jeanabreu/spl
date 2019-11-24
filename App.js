@@ -38,7 +38,11 @@ export default class App extends React.Component {
           }
         });
 
-    firebase.database().ref('Clientes/0005').set(
+
+        
+    
+       
+      firebase.database().ref('ult_conexion/last').set(
       {
         empresa: 'EMPRESA SRL',
         telefono: '8093330000',
@@ -46,12 +50,24 @@ export default class App extends React.Component {
       },
 
     ).then(() => {
-      console.log('INSERTADO!');
+      console.log('Usuario ha accedido!');
     })
-.catch((error) => {
-      console.log(error);
-    });
-  }
+    .catch((error) => {
+          console.log(error);
+        });
+     
+      
+       
+
+       
+            
+            
+      }//Funcion
+
+
+      
+  
+      
 
   render() {
     return (

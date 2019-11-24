@@ -9,38 +9,40 @@ import {
 import {
   Block, Button, Input, NavBar, Text,
 } from 'galio-framework';
+//import ModalDropdown from 'react-native-modal-dropdown';
+import { Dropdown } from 'react-native-material-dropdown';
+//import InputCode from 'react-native-input-code';
+
+
+
 import theme from '../theme';
-import Select from 'react-select';
+
+
 
 const { height, width } = Dimensions.get('window');
 //const defaultOption = options[0];
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
+
 
 class Login extends React.Component {
   state = {
     email: '-',
     password: '-',
-    selectedOption: null,
   }
 
   handleChange = (name, value) => {
     this.setState({ [name]: value });
   }
 
-  handleChange = selectedOption => {
-    this.setState(
-      { selectedOption },
-      () => console.log(`Option selected:`, this.state.selectedOption)
-    );
-  };
-
   render() {
     const { navigation } = this.props;
     const { email, password } = this.state;
+    let data1 = [{
+      value: 'RUTA 1',
+    }, {
+      value: 'RUTA 2',
+    }, {
+      value: 'RUTA 3',
+    }];
 
     return (
       <Block safe flex style={{ backgroundColor: theme.COLORS.WHITE }}>
@@ -107,16 +109,19 @@ class Login extends React.Component {
 
           <Block flex={2} center space="evenly">
             <Block flex={2}>
-              <Input
-                rounded
-                type="select"
-                placeholder="Ruta"
-                autoCapitalize="none"
-                style={{ width: width * 0.9 }}
-                onChangeText={text => this.handleChange('email', text)}
-              />
+             
+              
 
-                <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+              <Dropdown
+                rounded
+                label='Ruta'
+                style={{ width: width * 0.9 }}
+                data={data1}
+                onChangeText={text => this.handleChange('email', text)}
+               />
+
+              
+              
 
               <Input
                 rounded
@@ -136,14 +141,15 @@ class Login extends React.Component {
               </Text>
             </Block>
             <Block flex middle>
-              <Button
+            
+            
+            <Button
                 round
                 color="error"
-                onPress={() => Alert.alert(
-                  'Sign in action',
-                  `Email: ${email}
-Password: ${password}`,
-                )}
+                
+               onPress={() => Alert.alert( 'Sign in action',`Usuario: ${email} | Constraseña: ${password}`,)}
+               // onPress=""
+                              
               >
                 Acceder
               </Button>

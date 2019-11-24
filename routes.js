@@ -14,7 +14,8 @@ import ArticleCover from './src/screens/ArticleCover';
 import Cards from './src/screens/Cards';
 import Components from './src/screens/Components';
 import Login from './src/screens/Login';
-import Clientes from './src/screens/Clientes';
+import EstadodePedido from './src/screens/EstadodePedido';
+import Clientesdeldia from './src/screens/Clientesdeldia';
 import Pedidos from './src/screens/Pedidos';
 import Configuracion from './src/screens/Configuracion';
 import OrderConfirmed from './src/screens/OrderConfirmed';
@@ -92,36 +93,36 @@ const screens = {
     screen: Login,
     navigationOptions: {
       drawerLabel: 'Acceso a Usuario',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="user-circle" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Clientesdeldia: {
+    screen: Clientesdeldia,
+    navigationOptions: {
+      drawerLabel: 'Itinerio de Visita',
+      drawerIcon: props => <MenuIcon name="user-circle" family="font-awesome" focused={props.focused} />,
     },
   },
   
-  Home: {
-    screen: Components,
-    navigationOptions: {
-      drawerLabel: 'Rutas Diarias',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Clientes: {
-    screen: Clientes,
-    navigationOptions: {
-      drawerLabel: 'Clientes',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
   Article: {
     screen: Article,
     navigationOptions: {
       drawerLabel: 'Productos',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="dropbox" family="font-awesome" focused={props.focused} />,
     },
   },
   Pedidos: {
     screen: Pedidos,
     navigationOptions: {
       drawerLabel: 'Pedidos',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="calendar-minus-o" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  EstadodePedido: {
+    screen: EstadodePedido,
+    navigationOptions: {
+      drawerLabel: 'Estado de Pedidos',
+      drawerIcon: props => <MenuIcon name="shopping-cart" family="font-awesome" focused={props.focused} />,
     },
   },
 
@@ -129,21 +130,21 @@ const screens = {
     screen: Configuracion,
     navigationOptions: {
       drawerLabel: 'Configuración',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="gears" family="font-awesome" focused={props.focused} />,
     },
   },
   OrderConfirmed: {
     screen: OrderConfirmed,
     navigationOptions: {
       drawerLabel: 'Cierre del Dia',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="hourglass-end" family="font-awesome" focused={props.focused} />,
     },
   },
   Sincronizar: {
     screen: Sincronizar,
     navigationOptions: {
       drawerLabel: 'Sincronizar Datos',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="rotate-right" family="font-awesome" focused={props.focused} />,
     },
   },
 };
