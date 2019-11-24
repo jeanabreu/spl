@@ -145,6 +145,13 @@ const Configuracion = props => (
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
+
+                <Input
+                  rounded
+                  placeholder="Correo Supervisor"
+                  placeholderTextColor={theme.COLORS.THEME}
+                  style={{ borderColor: theme.COLORS.THEME }}
+                />
                 <Text muted center size={theme.SIZES.FONT * 1.575} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>
                  Credenciales de DB:
                 </Text>
@@ -190,12 +197,6 @@ const Configuracion = props => (
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />               
-                <Input
-                  rounded
-                  placeholder="Correo Supervisor"
-                  placeholderTextColor={theme.COLORS.THEME}
-                  style={{ borderColor: theme.COLORS.THEME }}
-                />
                 
                 <Button
                 round
