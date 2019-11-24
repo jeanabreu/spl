@@ -128,13 +128,13 @@ const Configuracion = props => (
                 <Input
                   rounded
                   password
-                  placeholder="Clave"
+                  placeholder="Clave APP"
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
                 <Input
                   rounded
-                  placeholder="Correo Electronico"
+                  placeholder="Correo de Salida"
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
@@ -150,22 +150,46 @@ const Configuracion = props => (
                 </Text>
                 <Input
                   rounded
-                  placeholder="AppKey"
+                  placeholder="apiKey"
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
                 <Input
                   rounded
-                  placeholder="AppSecret"
+                  placeholder="authDomain"
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
                 <Input
                   rounded
-                  placeholder="MasterSecret"
+                  placeholder="projectIdL"
                   placeholderTextColor={theme.COLORS.THEME}
                   style={{ borderColor: theme.COLORS.THEME }}
                 />
+                <Input
+                  rounded
+                  placeholder="storageBucket"
+                  placeholderTextColor={theme.COLORS.THEME}
+                  style={{ borderColor: theme.COLORS.THEME }}
+                />
+                <Input
+                  rounded
+                  placeholder="messagingSenderId"
+                  placeholderTextColor={theme.COLORS.THEME}
+                  style={{ borderColor: theme.COLORS.THEME }}
+                />
+                <Input
+                  rounded
+                  placeholder="appId"
+                  placeholderTextColor={theme.COLORS.THEME}
+                  style={{ borderColor: theme.COLORS.THEME }}
+                />
+                <Input
+                  rounded
+                  placeholder="smeasurementId"
+                  placeholderTextColor={theme.COLORS.THEME}
+                  style={{ borderColor: theme.COLORS.THEME }}
+                />               
                 <Input
                   rounded
                   placeholder="Correo Supervisor"
